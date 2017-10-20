@@ -4,6 +4,7 @@ Public Class clsADusuario
 
     'Prueba Usuario 1
 
+
     Public Function BorraUsuario(ByVal IdUsuario As Long) As Long
 
 
