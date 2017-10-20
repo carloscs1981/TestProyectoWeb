@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{267BAA59-425A-4FAE-8504-75337FA490C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libreria", "Libreria", "{AB46147A-11C2-45A5-94B0-EC52F11F9286}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Autopista_Library", "Autopista_Library\Autopista_Library.vbproj", "{822D850C-6E84-4CEF-8075-982447345705}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Autopista", "Autopista\", "{96F43374-3269-40C3-8A8F-85851329A051}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{822d850c-6e84-4cef-8075-982447345705}|Administracion_Library.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Autopista"
+		Debug.AspNetCompiler.PhysicalPath = "Autopista\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Autopista\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Autopista"
+		Release.AspNetCompiler.PhysicalPath = "Autopista\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Autopista\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1137"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{822D850C-6E84-4CEF-8075-982447345705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822D850C-6E84-4CEF-8075-982447345705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822D850C-6E84-4CEF-8075-982447345705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822D850C-6E84-4CEF-8075-982447345705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F43374-3269-40C3-8A8F-85851329A051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F43374-3269-40C3-8A8F-85851329A051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F43374-3269-40C3-8A8F-85851329A051}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F43374-3269-40C3-8A8F-85851329A051}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96F43374-3269-40C3-8A8F-85851329A051} = {267BAA59-425A-4FAE-8504-75337FA490C4}
+		{822D850C-6E84-4CEF-8075-982447345705} = {AB46147A-11C2-45A5-94B0-EC52F11F9286}
+	EndGlobalSection
+EndGlobal

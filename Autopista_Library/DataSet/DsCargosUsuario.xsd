@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCargosUsuario" targetNamespace="http://tempuri.org/DsCargosUsuario.xsd" xmlns:mstns="http://tempuri.org/DsCargosUsuario.xsd" xmlns="http://tempuri.org/DsCargosUsuario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCargosUsuario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsCargosUsuario" msprop:Generator_UserDSName="DsCargosUsuario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DatosCargo" msprop:Generator_TableClassName="DatosCargoDataTable" msprop:Generator_TableVarName="tableDatosCargo" msprop:Generator_TablePropName="DatosCargo" msprop:Generator_RowDeletingName="DatosCargoRowDeleting" msprop:Generator_RowChangingName="DatosCargoRowChanging" msprop:Generator_RowEvHandlerName="DatosCargoRowChangeEventHandler" msprop:Generator_RowDeletedName="DatosCargoRowDeleted" msprop:Generator_UserTableName="DatosCargo" msprop:Generator_RowChangedName="DatosCargoRowChanged" msprop:Generator_RowEvArgName="DatosCargoRowChangeEvent" msprop:Generator_RowClassName="DatosCargoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdCargo" msprop:Generator_ColumnVarNameInTable="columnIdCargo" msprop:Generator_ColumnPropNameInRow="IdCargo" msprop:Generator_ColumnPropNameInTable="IdCargoColumn" msprop:Generator_UserColumnName="IdCargo" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreCargo" msprop:Generator_ColumnVarNameInTable="columnNombreCargo" msprop:Generator_ColumnPropNameInRow="NombreCargo" msprop:Generator_ColumnPropNameInTable="NombreCargoColumn" msprop:Generator_UserColumnName="NombreCargo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

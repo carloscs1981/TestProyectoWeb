@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <comReferences>
+    <reference Name="interop.microsoft.office.interop.outlook" ID="{00062FFF-0000-0000-C000-000000000046}\9.5\0"/>
+    <reference Name="interop.pdfshellserverlib" ID="{41C5FFFE-36DD-415D-9ED0-2976A342A1C8}\1.0\0"/>
+    <reference Name="interop.pdfshelllib" ID="{67E94227-7662-4050-9C72-746983CF37A2}\1.0\0"/>
+    <reference Name="interop.pdffilterlib" ID="{789AD2D7-E1C2-4EC7-A049-2DB5BB4CB57A}\1.0\0"/>
+    <reference Name="interop.pdfprevhndlrlib" ID="{0F6D3808-7974-4B1A-94C2-3200767EACE8}\1.0\0"/>
+  </comReferences>
+
+  <StartupServices>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    <Service ID="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}"/>
+  </StartupServices>
+</VisualWebDeveloper>

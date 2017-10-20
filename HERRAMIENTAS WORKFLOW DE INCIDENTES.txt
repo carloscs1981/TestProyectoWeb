@@ -1,0 +1,13 @@
+Software de gestion de incidentes
+
+1. Service Desk de la empresa Proactivanet 
+   www.proactivanet.com
+
+2. Modulo de Gestion de Incidencias de Chomax 
+   http://bitbang.cl/chromax
+
+3. ServiceNow de la Empresa GBAdvisors
+https://www.gb-advisors.com/es/gestion-servicios-ti/servicenow-gestion-de-servicios-ti/
+
+4. Herramientas Open Source de Ticketing para gestion de helpdesk
+   http://www.calidadytecnologia.com/2014/11/herramientas-ticketing-open-source.html

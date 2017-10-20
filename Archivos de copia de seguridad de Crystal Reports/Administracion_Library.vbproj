@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{822D850C-6E84-4CEF-8075-982447345705}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Administracion_Library</RootNamespace>
+    <AssemblyName>Administracion_Library</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Administracion_Library.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Administracion_Library.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AD\clsADMantenedores.vb" />
+    <Compile Include="AD\clsADusuario.vb" />
+    <Compile Include="AD\Generales\clsADProveedores.vb" />
+    <Compile Include="AD\Generales\clsADusuariosExternos.vb" />
+    <Compile Include="AD\Informes\clsADInformes.vb" />
+    <Compile Include="clsFunciones.vb" />
+    <Compile Include="DATASET\AutentificaUsuario.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutentificaUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\DsUsuario.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\DS_UsuariosIngresados.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_UsuariosIngresados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\DS_usuario_por_ID.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_usuario_por_ID.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Generales\DS_Generico.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Generico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Generales\DS_Proveedores.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Generales\DS_Proveedores.vb">
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Generales\DS_UsuariosExternos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_UsuariosExternos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Generales\DS_UsuariosExternos.vb">
+      <DependentUpon>DS_UsuariosExternos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DatasetsGraficos\Ds_informe_ventas_cc_grafico.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_informe_ventas_cc_grafico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DatasetsGraficos\DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\ds_CotizacionesEmitidas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_CotizacionesEmitidas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\ds_Informe_MargenB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Informe_MargenB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\ds_Informe_MargenBDetalle.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Informe_MargenBDetalle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DS_INFORME_VENTAS_CC.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_INFORME_VENTAS_CC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DS_INFORME_VENTAS_CC.vb">
+      <DependentUpon>DS_INFORME_VENTAS_CC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DS_INFORME_VENTAS_CC_CABECERA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_INFORME_VENTAS_CC_CABECERA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DS_INFORME_VENTAS_TOTALES_CABECERA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_INFORME_VENTAS_TOTALES_CABECERA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_NV_PENDIENTES_DESPACHO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO_DET.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_NV_PENDIENTES_DESPACHO_DET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_CABECERA_JEMO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_INF_VENTAS_CC_CABECERA_JEMO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_DETALLE_JEMO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_INF_VENTAS_CC_DETALLE_JEMO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Mantenedores\DS_Cargos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Mantenedores\DS_Ciudades.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Ciudades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Mantenedores\DS_Companias.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Companias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Mantenedores\DS_Comuna.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Comuna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Mantenedores\DS_CONTRATO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CONTRATO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Mantenedores\DS_Convenios.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Convenios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Mantenedores\DS_Convenios.vb">
+      <DependentUpon>DS_Convenios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GENERALES\clsAccesoDatos.vb" />
+    <Compile Include="GENERALES\clsAccesoDatosManager.vb" />
+    <Compile Include="GENERALES\clsEncriptador.vb" />
+    <Compile Include="Class1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NE\clsNEMantenedores.vb" />
+    <Compile Include="NE\clsNEUsuario.vb" />
+    <Compile Include="NE\Generales\clsNEProveedores.vb" />
+    <Compile Include="NE\Generales\clsNEUsuariosExternos.vb" />
+    <Compile Include="NE\Informes\clsNEInformes.vb" />
+    <Compile Include="Reportes\GrupoJEmo\CRVGraficoMargenVentas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRVGraficoMargenVentas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GrupoJEmo\CRVGraficoVentasTotales.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRVGraficoVentasTotales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\GrupoJEmo\GraficoVentasCentroCosto.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GraficoVentasCentroCosto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteVentasCC.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteVentasCC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptVentasCentroCosto.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentasCentroCosto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GrupoJEmo\CRVGraficoMargenVentas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRVGraficoMargenVentas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GrupoJEmo\CRVGraficoVentasTotales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRVGraficoVentasTotales.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\GrupoJEmo\GraficoVentasCentroCosto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GraficoVentasCentroCosto.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteVentasCC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteVentasCC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptVentasCentroCosto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasCentroCosto.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DATASET\AutentificaUsuario.xsc">
+      <DependentUpon>AutentificaUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\AutentificaUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AutentificaUsuario.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\AutentificaUsuario.xss">
+      <DependentUpon>AutentificaUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DsUsuario.xsc">
+      <DependentUpon>DsUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DsUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsUsuario.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\DsUsuario.xss">
+      <DependentUpon>DsUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DS_UsuariosIngresados.xsc">
+      <DependentUpon>DS_UsuariosIngresados.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DS_UsuariosIngresados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_UsuariosIngresados.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\DS_UsuariosIngresados.xss">
+      <DependentUpon>DS_UsuariosIngresados.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DS_usuario_por_ID.xsc">
+      <DependentUpon>DS_usuario_por_ID.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DS_usuario_por_ID.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_usuario_por_ID.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\DS_usuario_por_ID.xss">
+      <DependentUpon>DS_usuario_por_ID.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Generales\DS_Generico.xsc">
+      <DependentUpon>DS_Generico.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Generales\DS_Generico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Generico.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Generales\DS_Generico.xss">
+      <DependentUpon>DS_Generico.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Generales\DS_Proveedores.xsc">
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Generales\DS_Proveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Proveedores.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Generales\DS_Proveedores.xss">
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Generales\DS_UsuariosExternos.xsc">
+      <DependentUpon>DS_UsuariosExternos.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Generales\DS_UsuariosExternos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_UsuariosExternos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Generales\DS_UsuariosExternos.xss">
+      <DependentUpon>DS_UsuariosExternos.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DatasetsGraficos\Ds_informe_ventas_cc_grafico.xsc">
+      <DependentUpon>Ds_informe_ventas_cc_grafico.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DatasetsGraficos\Ds_informe_ventas_cc_grafico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_informe_ventas_cc_grafico.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\DatasetsGraficos\Ds_informe_ventas_cc_grafico.xss">
+      <DependentUpon>Ds_informe_ventas_cc_grafico.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DatasetsGraficos\DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.xsc">
+      <DependentUpon>DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DatasetsGraficos\DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\DatasetsGraficos\DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.xss">
+      <DependentUpon>DS_INF_VENTAS_CENTRO_COSTO_JEMO_GRAFICO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\ds_CotizacionesEmitidas.xsc">
+      <DependentUpon>ds_CotizacionesEmitidas.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\ds_CotizacionesEmitidas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_CotizacionesEmitidas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\ds_CotizacionesEmitidas.xss">
+      <DependentUpon>ds_CotizacionesEmitidas.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\ds_Informe_MargenB.xsc">
+      <DependentUpon>ds_Informe_MargenB.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\ds_Informe_MargenB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Informe_MargenB.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\ds_Informe_MargenB.xss">
+      <DependentUpon>ds_Informe_MargenB.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\ds_Informe_MargenBDetalle.xsc">
+      <DependentUpon>ds_Informe_MargenBDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\ds_Informe_MargenBDetalle.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Informe_MargenBDetalle.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\ds_Informe_MargenBDetalle.xss">
+      <DependentUpon>ds_Informe_MargenBDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_CC.xsc">
+      <DependentUpon>DS_INFORME_VENTAS_CC.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_CC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_INFORME_VENTAS_CC.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_CC.xss">
+      <DependentUpon>DS_INFORME_VENTAS_CC.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_CC_CABECERA.xsc">
+      <DependentUpon>DS_INFORME_VENTAS_CC_CABECERA.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_CC_CABECERA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_INFORME_VENTAS_CC_CABECERA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_CC_CABECERA.xss">
+      <DependentUpon>DS_INFORME_VENTAS_CC_CABECERA.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_TOTALES_CABECERA.xsc">
+      <DependentUpon>DS_INFORME_VENTAS_TOTALES_CABECERA.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_TOTALES_CABECERA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_INFORME_VENTAS_TOTALES_CABECERA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\DS_INFORME_VENTAS_TOTALES_CABECERA.xss">
+      <DependentUpon>DS_INFORME_VENTAS_TOTALES_CABECERA.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO.xsc">
+      <DependentUpon>DS_NV_PENDIENTES_DESPACHO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_NV_PENDIENTES_DESPACHO.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO.xss">
+      <DependentUpon>DS_NV_PENDIENTES_DESPACHO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO_DET.xsc">
+      <DependentUpon>DS_NV_PENDIENTES_DESPACHO_DET.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO_DET.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_NV_PENDIENTES_DESPACHO_DET.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\DS_NV_PENDIENTES_DESPACHO_DET.xss">
+      <DependentUpon>DS_NV_PENDIENTES_DESPACHO_DET.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_CABECERA_JEMO.xsc">
+      <DependentUpon>DS_INF_VENTAS_CC_CABECERA_JEMO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_CABECERA_JEMO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_INF_VENTAS_CC_CABECERA_JEMO.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_CABECERA_JEMO.xss">
+      <DependentUpon>DS_INF_VENTAS_CC_CABECERA_JEMO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_DETALLE_JEMO.xsc">
+      <DependentUpon>DS_INF_VENTAS_CC_DETALLE_JEMO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_DETALLE_JEMO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_INF_VENTAS_CC_DETALLE_JEMO.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Informes\InformesGrupoJemo\DS_INF_VENTAS_CC_DETALLE_JEMO.xss">
+      <DependentUpon>DS_INF_VENTAS_CC_DETALLE_JEMO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Cargos.xsc">
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Cargos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Cargos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Cargos.xss">
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Ciudades.xsc">
+      <DependentUpon>DS_Ciudades.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Ciudades.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Ciudades.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Ciudades.xss">
+      <DependentUpon>DS_Ciudades.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Companias.xsc">
+      <DependentUpon>DS_Companias.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Companias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Companias.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Companias.xss">
+      <DependentUpon>DS_Companias.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Comuna.xsc">
+      <DependentUpon>DS_Comuna.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Comuna.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Comuna.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Comuna.xss">
+      <DependentUpon>DS_Comuna.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_CONTRATO.xsc">
+      <DependentUpon>DS_CONTRATO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_CONTRATO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CONTRATO.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_CONTRATO.xss">
+      <DependentUpon>DS_CONTRATO.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Convenios.xsc">
+      <DependentUpon>DS_Convenios.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Convenios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Convenios.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DATASET\Mantenedores\DS_Convenios.xss">
+      <DependentUpon>DS_Convenios.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
