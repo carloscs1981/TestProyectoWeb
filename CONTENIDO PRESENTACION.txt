@@ -1,0 +1,29 @@
+
+Estructura Presentacion
+
+1. Presentacion Personal
+
+2. Alcanzes del proyecto
+
+  - Plataforma web responsiva (incidentes, requerimientos, actividades) para distintas áreas de la empresa
+  - Control sobre operaciones del área de TI, 
+  - Estadísticas y performance de respuestas
+  - Evaluación de áreas que presentan mayores problemas
+  - Toma de desiciones informadas
+
+3. Etapas del proyecto.
+ - Analisis/Diseño
+ - Programación
+ - Testing
+ - Implementación 
+ - Capacitación
+ 
+
+4. Beneficios del desarrollo a medida v/s Software ya listos
+ - Propiededad del código fuente
+ - Posibilidad de integración con otros sistemas de la empresa
+ - Gasto inicial pudiera parecer elevado pero se reduce en el tiempo
+ - Facilidad Mantenimiento (adaptación si se ajustan procesos de la empresa)
+ - 
+
+5. Demo de interfáz

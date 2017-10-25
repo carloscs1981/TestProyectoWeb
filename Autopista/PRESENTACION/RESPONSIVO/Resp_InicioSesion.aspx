@@ -1,6 +1,5 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="InicioSesion.aspx.vb" Inherits="InicioSesion" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Resp_InicioSesion.aspx.vb" Inherits="PRESENTACION_RESPONSIVO_Resp_InicioSesion" %>
 
-<!DOCTYPE html>
 
 <html lang="es">
   <head>
