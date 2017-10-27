@@ -1,0 +1,126 @@
+﻿<%@ Master Language="VB" CodeFile="MP_PaginaMaestraSuperior.master.vb" Inherits="PRESENTACION_Master_Page_MasterPageAutopista" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  
+         
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no">
+    
+
+    <title></title>
+    
+    
+    <style type="text/css">
+        .auto-style3 {
+            height: 109px;
+        }
+        .auto-style4 {
+            width: 100%;
+            height: 10px;
+        }
+        .auto-style5 {
+            width: 440px;
+        }
+        .auto-style6 {
+            width: 782px;
+        }
+        .auto-style7 {
+            margin-left: 0px;
+        }
+        .auto-style8 {
+            height: 93px;
+        }
+        .auto-style9 {
+            height: 10px;
+        }
+        .auto-style10 {
+            width: 440px;
+            height: 52px;
+        }
+        .auto-style11 {
+            width: 782px;
+            height: 52px;
+        }
+        .auto-style12 {
+            height: 52px;
+        }
+    </style>
+    
+    
+    </head>
+<body style="height: 278px">
+
+
+
+
+
+                        <form id="form1" runat="server" class="auto-style8">
+
+
+
+
+
+                        <div id="DivContenedorPrincipal" class="auto-style3" style="background-color: #ACBFF2">
+                            <span>
+                            <table class="auto-style4">
+                                <tr>
+                                    <td class="auto-style10">
+                                        <asp:Image ID="Image1" runat="server" Height="47px" ImageUrl="~/PRESENTACION/RESPONSIVO/Recursos/LogoAutopista.png" Width="154px" />
+                                    </td>
+                                    <td class="auto-style11"></td>
+                                    <td class="auto-style12">
+                                        <asp:ImageButton ID="ImageButton1" runat="server" CssClass="auto-style7" Height="39px" ImageAlign="Left" ImageUrl="~/PRESENTACION/recursos/Salir_Trans.png" Width="43px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style5">
+                            <span>
+                                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Calibri" ForeColor="#000066" Text="PLATAFORMA DE GESTIÓN DE REQUERIMIENTOS"></asp:Label>
+
+                            </span>
+
+                                    </td>
+                                    <td class="auto-style6">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style5">
+                            <span>
+                                        <asp:Label ID="lblNombreUsuario" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="#000066" Text="Usuario"></asp:Label>
+
+                            </span></td>
+                                    <td class="auto-style6">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                            <div id="DivSeparador" class="auto-style9" style="background-color: #02103E">
+                            </div>
+
+                            </span>
+                            <br />
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+
+
+
+
+
+
+                        </form>
+
+
+
+
+
+
+</body>
+</html>
+

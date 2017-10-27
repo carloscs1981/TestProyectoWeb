@@ -1,5 +1,5 @@
 ﻿
-Partial Class PRESENTACION_Administracion_PanelAdministracion
+Partial Class PRESENTACION_Administracion_MenuInicial
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -8,7 +8,7 @@ Partial Class PRESENTACION_Administracion_PanelAdministracion
         Response.Cache.SetExpires(DateTime.Now)
 
         If (Session("User_NombreUsuario") Is Nothing) Then
-            Response.Redirect("PRESENTACION/InicioSesion.aspx", False)
+            Response.Redirect("InicioSesion.aspx", False)
 
         Else
 
@@ -23,21 +23,22 @@ Partial Class PRESENTACION_Administracion_PanelAdministracion
             'Session.Add("User_Cargo", Data.Cargo)
             'Session.Add("User_AdministradorSistema", Data.AdministradorSistema)
 
-
+            'lblNombreUsuario.Text = ""
+            'lblNombreUsuario.Text = Session("User_NombreCompleto").ToString & " | " & Session("User_Cargo").ToString
 
             'PERFILES DE USUARIO
             '________________________________________________________________________
 
-            'ImgPanelAdministracion.Visible = True
-            'lblPanelAdministracion.Visible = True
+            ImgPnaleAdmin.Visible = False
+            LinkPanelAdm.Visible = False
 
 
-            'If (CType(Session("User_AdministradorSistema").ToString, Boolean) = True) Then
+            If (CType(Session("User_AdministradorSistema").ToString, Boolean) = True) Then
 
-            '    ImgPanelAdministracion.Visible = True
-            '    lblPanelAdministracion.Visible = True
+                ImgPnaleAdmin.Visible = True
+                LinkPanelAdm.Visible = True
 
-            'End If
+            End If
 
 
             '________________________________________________________________________
@@ -50,5 +51,4 @@ Partial Class PRESENTACION_Administracion_PanelAdministracion
 
 
     End Sub
-
 End Class

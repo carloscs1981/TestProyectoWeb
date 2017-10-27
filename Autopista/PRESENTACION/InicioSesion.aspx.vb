@@ -77,7 +77,7 @@ Partial Class InicioSesion
                     Next
 
                     Session.Add("User_UsuarioValido", 1)
-                    Response.Redirect("./MenuPrincipal.aspx", False)
+                    Response.Redirect("./MenuInicial.aspx", False)
 
 
                 End If
