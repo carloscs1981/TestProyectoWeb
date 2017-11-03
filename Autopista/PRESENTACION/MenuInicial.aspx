@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/PRESENTACION/MP_PaginaMaestraSuperior.master" AutoEventWireup="false" CodeFile="MenuInicial.aspx.vb" Inherits="PRESENTACION_Administracion_MenuInicial" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-    
-<html>
+       
+    <html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -291,24 +290,7 @@
 
     </div><!-- .entry-content -->
 
-	<footer id="colophon" role="contentinfo">
-
-			
-
-			<div id="site-generator">
-<p style="height: 54px">Copyright 2017 Autopistas de Antofagasta
-<br />
-    | 
-<a href="http://amazingcarousel.com/"><span class="auto-style13">Desarrollado por Carlos Carrera</span></a> |&nbsp;
-<br />
-                </p>
-			</div>
-	</footer>
-
-    <p>
-        &nbsp;</p>
-
-    
+	
 </body>
 </html>
 

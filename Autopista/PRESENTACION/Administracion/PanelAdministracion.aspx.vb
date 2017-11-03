@@ -2,14 +2,15 @@
 Partial Class PRESENTACION_Administracion_PanelAdministracion
     Inherits System.Web.UI.Page
 
+    Dim URL_Salir As String = "~/PRESENTACION/InicioSesion.aspx"
+
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Response.Cache.SetCacheability(HttpCacheability.NoCache)
         Response.Cache.SetExpires(DateTime.Now)
 
         If (Session("User_NombreUsuario") Is Nothing) Then
-            Response.Redirect("PRESENTACION/InicioSesion.aspx", False)
-
+            Response.Redirect("~/PRESENTACION/InicioSesion.aspx", False)
         Else
 
 

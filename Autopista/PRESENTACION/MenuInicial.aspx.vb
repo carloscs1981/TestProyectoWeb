@@ -9,7 +9,6 @@ Partial Class PRESENTACION_Administracion_MenuInicial
 
         If (Session("User_NombreUsuario") Is Nothing) Then
             Response.Redirect("InicioSesion.aspx", False)
-
         Else
 
 

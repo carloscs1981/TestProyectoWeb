@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
   
-         
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+           
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no">
@@ -19,92 +19,58 @@
     
     <style type="text/css">
         .auto-style3 {
-            height: 109px;
-        }
-        .auto-style4 {
-            width: 100%;
-            height: 10px;
-        }
-        .auto-style5 {
-            width: 440px;
-        }
-        .auto-style6 {
-            width: 782px;
-        }
-        .auto-style7 {
-            margin-left: 0px;
+            height: 26px;
         }
         .auto-style8 {
-            height: 93px;
+            height: 70px;
         }
         .auto-style9 {
-            height: 10px;
+            left: 0px;
+            top: 0px;
+            height: 35px;
         }
-        .auto-style10 {
-            width: 440px;
-            height: 52px;
-        }
-        .auto-style11 {
-            width: 782px;
-            height: 52px;
-        }
-        .auto-style12 {
-            height: 52px;
-        }
-    </style>
+        </style>
     
     
     </head>
-<body style="height: 278px">
+<body style="height: 9px">
+
+ <form id="form1" runat="server" class="auto-style8">
 
 
 
 
 
-                        <form id="form1" runat="server" class="auto-style8">
-
-
-
-
-
-                        <div id="DivContenedorPrincipal" class="auto-style3" style="background-color: #ACBFF2">
+                        <div id="DivContenedorPrincipal" class="auto-style3">
                             <span>
-                            <table class="auto-style4">
-                                <tr>
-                                    <td class="auto-style10">
-                                        <asp:Image ID="Image1" runat="server" Height="47px" ImageUrl="~/PRESENTACION/RESPONSIVO/Recursos/LogoAutopista.png" Width="154px" />
-                                    </td>
-                                    <td class="auto-style11"></td>
-                                    <td class="auto-style12">
-                                        <asp:ImageButton ID="ImageButton1" runat="server" CssClass="auto-style7" Height="39px" ImageAlign="Left" ImageUrl="~/PRESENTACION/recursos/Salir_Trans.png" Width="43px" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style5">
+                            <div class="text-left">
                             <span>
-                                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Calibri" ForeColor="#000066" Text="PLATAFORMA DE GESTIÓN DE REQUERIMIENTOS"></asp:Label>
+                                        <asp:Image ID="Image1" runat="server" Height="43px" ImageUrl="~/PRESENTACION/RESPONSIVO/Recursos/LogoAutopista.png" Width="144px" />
+                             </span>
+                                        </div>
+                             <div class="text-center">
+                            <span>
+                                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="ARIAL" ForeColor="#0F0147" Text="PLATAFORMA DE GESTIÓN DE REQUERIMIENTOS" Font-Size="Large"></asp:Label>
 
                             </span>
+                                        </div>           
 
-                                    </td>
-                                    <td class="auto-style6">&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style5">
-                            <span>
-                                        <asp:Label ID="lblNombreUsuario" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="#000066" Text="Usuario"></asp:Label>
-
-                            </span></td>
-                                    <td class="auto-style6">&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
-                            <div id="DivSeparador" class="auto-style9" style="background-color: #02103E">
-                            </div>
-
-                            </span>
-                            <br />
+                                <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+       <asp:Label ID="lblNombreUsuario" runat="server" class="navbar-brand" Font-Names="Calibri" Font-Size="Medium" ForeColor="#FFFFFF" Text="Usuario"></asp:Label>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="#">Ayuda en Linea</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="auto-style9"><a runat="server" href="#" onserverclick="IrMenuInicial"><span class="glyphicon glyphicon-home"></span> Menu Principal</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
+      <li class="auto-style9"><a runat="server" href="#" onserverclick="SalirPlataforma"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+    </ul>
+  </div>
+</nav>
+ </span>
                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                             </asp:ContentPlaceHolder>
                         </div>
@@ -120,7 +86,18 @@
 
 
 
+ <footer id="colophon" role="contentinfo">
+<div id="site-generator">
+<p style="height: 50px">Copyright 2017 Autopistas de Antofagasta
+<br />
+<span class="auto-style13">Desarrollado por Carlos A. Carrera S. - carloscs1981@yahoo.com</span>
+<br />
+</p>
+			</div>
+</footer>
 
 </body>
+   
+
 </html>
 

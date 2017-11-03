@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{267BAA59-425A-4FAE-8504-75337FA490C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libreria", "Libreria", "{AB46147A-11C2-45A5-94B0-EC52F11F9286}"
@@ -26,6 +28,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Autopista", "Autopista\", "
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "1137"
+		SlnRelativePath = "Autopista\"
 	EndProjectSection
 EndProject
 Global
@@ -47,7 +50,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{96F43374-3269-40C3-8A8F-85851329A051} = {267BAA59-425A-4FAE-8504-75337FA490C4}
 		{822D850C-6E84-4CEF-8075-982447345705} = {AB46147A-11C2-45A5-94B0-EC52F11F9286}
+		{96F43374-3269-40C3-8A8F-85851329A051} = {267BAA59-425A-4FAE-8504-75337FA490C4}
 	EndGlobalSection
 EndGlobal
