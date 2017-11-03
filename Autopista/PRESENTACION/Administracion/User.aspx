@@ -28,14 +28,92 @@
         .auto-style8 {
             width: 256px;
         }
-        .auto-style9 {
-            width: 58px;
+        .auto-style11 {
+            width: 170px;
+            height: 23px;
         }
-        .auto-style10 {
-            width: 53px;
+        .auto-style12 {
+            width: 235px;
+            height: 23px;
+        }
+        .auto-style13 {
+            width: 256px;
+            height: 23px;
         }
     </style>
     
+
+
+<script type="text/javascript" src="../../Scripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        ObtenerUsuarios();
+
+    });
+    function ObtenerUsuarios()
+    {
+
+        
+        $.ajax({
+            type: "POST",
+            url: "User.aspx/CargaUsuarios",
+            contentType: "application/json;charset=utf-8",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+
+                $("#DivGrilla").empty();
+
+                if (data.d.length > 0) {
+                    $("#DivGrilla").append("<tr><th>NumRegistro</th>" & _  
+                                           "<th>IdUsuario</th>" & _ 
+                    "<th>NombreUsuario</th>" & _  
+                    "<th>NombreCompleto</th>" & _ 
+                    "<th>NombreCargo</th>" & _ 
+                    "<th>Activo</th>" & _ 
+                    "<th>AdministradorSistema</th></tr>");
+                    for (var i = 0; i < data.d.length; i++) {
+
+                        $("#DivGrilla").append("<tr><td>" + 
+                        data.d[i].NumRegistro + "</td> <td>" + 
+                        data.d[i].IdUsuario + "</td> <td>" + 
+                        data.d[i].NombreUsuario + "</td> <td>" + 
+                        data.d[i].NombreCompleto + "</td> <td>" + 
+                        data.d[i].NombreCargo + "</td> <td>" + 
+                        data.d[i].Activo + "</td> <td>" + 
+                        data.d[i].AdministradorSistema + "</td></tr>");
+                    }
+                }
+            },
+            error: function (result) {
+                //alert("Error login");
+
+            }
+        });
+
+
+
+        //     debugger;
+        $.ajax({
+            type: "POST",
+            url: "User.aspx/CargaUsuarios",
+            data: '{}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: successCargaDatosUsuarios,
+            failure: function (response) {
+                alert(response.d);
+            },
+            error: function (response) {
+                alert(response.d);
+            }
+        });
+    }
+
+</script>
+
+
   
     </head>
 <body style="height: 678px; width: 1303px;">
@@ -159,12 +237,14 @@
                                                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar" Width="76px" />
                                                 <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" Width="79px" />
                                             </td>
-                                <td class="auto-style8">&nbsp;</td>
+                                <td class="auto-style8">
+                                                <asp:Button ID="btnActualiza" runat="server" Text="ACTUALIZA" Width="79px" />
+                                            </td>
                             </tr>
                             <tr>
-                                <td class="auto-style6">&nbsp;</td>
-                                <td class="auto-style7" colspan="4">&nbsp;</td>
-                                <td class="auto-style8">&nbsp;</td>
+                                <td class="auto-style11"></td>
+                                <td class="auto-style12" colspan="4"></td>
+                                <td class="auto-style13"></td>
                             </tr>
                             <tr>
                                 <td class="auto-style6">&nbsp;</td>

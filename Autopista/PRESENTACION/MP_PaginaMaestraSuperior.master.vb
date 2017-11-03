@@ -38,7 +38,6 @@ Partial Class PRESENTACION_Master_Page_MasterPageAutopista
 
     Public Sub IrMenuInicial()
 
-        Response.Cookies.Clear()
         Response.Redirect("~/PRESENTACION/MenuInicial.aspx", False)
 
 
