@@ -113,7 +113,8 @@
 
 </script>
 
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
   
     </head>
 <body style="height: 678px; width: 1303px;">
@@ -133,6 +134,10 @@
             <asp:Image ID="imgBarraGris" runat="server" Height="23px" ImageUrl="~/RECURSOS/images/image_22.jpg" Width="1262px" />
                         </div>
                         <br />
+                        <asp:ScriptManager ID="ScriptManager2" runat="server">
+                        </asp:ScriptManager>
+                        <asp:Timer runat="server" id="TimerActualizaGrillaUsuarios" Interval="10000" OnTick="Timer1_Tick"></asp:Timer>
+
                         <br />
                         <div id="DivExtraño" style="background-color: #FFFFFF; position: relative; top: 93px; left: 3px; height: 65px; width: 28px; margin-bottom: 0px;">
                         </div>
@@ -262,82 +267,91 @@
                             </tr>
                         </table>
                                     <div id="DivGrilla" style="height: 152px">
-                                    <asp:GridView ID="grdUsuarios" runat="server" AutoGenerateColumns="False" CaptionAlign="Bottom" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None" Height="143px" HorizontalAlign="Center" Width="727px" AllowPaging="True" AllowSorting="True">
-                                        <AlternatingRowStyle BackColor="White" />
-                                        <Columns>
-                                            <asp:BoundField AccessibleHeaderText="Nº" DataField="NumRegistro" HeaderText="Nº">
-                                            <HeaderStyle ForeColor="Black" Width="15px" />
-                                            </asp:BoundField>
-                                            <asp:ButtonField HeaderText="Sel" Text="Sel" ButtonType="Button">
-                                            <HeaderStyle ForeColor="Black" />
-                                            <ItemStyle Width="30px" Font-Size="Small" HorizontalAlign="Left" />
-                                            </asp:ButtonField>
-                                            <asp:BoundField DataField="IdUsuario" HeaderText="ID">
-                                            <HeaderStyle ForeColor="Black" Width="30px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="NombreUsuario" HeaderText="User">
-                                            <HeaderStyle ForeColor="Black" Width="40px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre Completo">
-                                            <HeaderStyle ForeColor="Black" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="NombreCargo" HeaderText="Cargo">
-                                            <HeaderStyle ForeColor="Black" Width="150px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="Activo" HeaderText="Activo">
-                                            <HeaderStyle ForeColor="Black" Width="50px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="AdministradorSistema" HeaderText="Admin">
-                                            <HeaderStyle ForeColor="Black" Width="50px" />
-                                            </asp:BoundField>
-                                        </Columns>
-                                        <EditRowStyle BackColor="#2461BF" />
-                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Font-Size="Small" HorizontalAlign="Left" />
-                                        <PagerSettings Mode="NumericFirstLast" />
-                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" Font-Bold="False" Font-Size="Medium" Width="10px" />
-                                        <RowStyle BackColor="#EFF3FB" Font-Size="Small" />
-                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                    </asp:GridView>
+                                        <asp:UpdatePanel ID="UPGrillaUsuarios" runat="server">
+                                            <ContentTemplate>
+
+                                                <asp:GridView ID="grdUsuarios" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CaptionAlign="Bottom" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None" Height="143px" HorizontalAlign="Center" Width="727px">
+                                                    <AlternatingRowStyle BackColor="White" />
+                                                    <Columns>
+                                                        <asp:BoundField AccessibleHeaderText="Nº" DataField="NumRegistro" HeaderText="Nº">
+                                                        <HeaderStyle ForeColor="Black" Width="15px" />
+                                                        </asp:BoundField>
+                                                        <asp:ButtonField ButtonType="Button" HeaderText="Sel" Text="Sel">
+                                                        <HeaderStyle ForeColor="Black" />
+                                                        <ItemStyle Font-Size="Small" HorizontalAlign="Left" Width="30px" />
+                                                        </asp:ButtonField>
+                                                        <asp:BoundField DataField="IdUsuario" HeaderText="ID">
+                                                        <HeaderStyle ForeColor="Black" Width="30px" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="NombreUsuario" HeaderText="User">
+                                                        <HeaderStyle ForeColor="Black" Width="40px" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre Completo">
+                                                        <HeaderStyle ForeColor="Black" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="NombreCargo" HeaderText="Cargo">
+                                                        <HeaderStyle ForeColor="Black" Width="150px" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="Activo" HeaderText="Activo">
+                                                        <HeaderStyle ForeColor="Black" Width="50px" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="AdministradorSistema" HeaderText="Admin">
+                                                        <HeaderStyle ForeColor="Black" Width="50px" />
+                                                        </asp:BoundField>
+                                                    </Columns>
+                                                    <EditRowStyle BackColor="#2461BF" />
+                                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" Font-Size="Small" ForeColor="White" HorizontalAlign="Left" />
+                                                    <PagerSettings Mode="NumericFirstLast" />
+                                                    <PagerStyle BackColor="#2461BF" Font-Bold="False" Font-Size="Medium" ForeColor="White" HorizontalAlign="Center" Width="10px" />
+                                                    <RowStyle BackColor="#EFF3FB" Font-Size="Small" />
+                                                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                </asp:GridView>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
                                 </div>
                         <div style="height: 212px; background-color: #FFFF00;" id="DivGrillaExcel" hidden="hidden">
-                                    <asp:GridView ID="grdExcel" runat="server" AutoGenerateColumns="False" CaptionAlign="Bottom" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None" Height="108px" HorizontalAlign="Center" Width="242px" PageSize="1" AllowSorting="True">
-                                        <AlternatingRowStyle BackColor="White" />
-                                        <Columns>
-                                            <asp:BoundField AccessibleHeaderText="Nº" DataField="NumRegistro" HeaderText="Nº">
-                                            <HeaderStyle ForeColor="Black" Width="15px" />
-                                            </asp:BoundField>
-                                            <asp:ButtonField HeaderText="Sel" Text="Sel" ButtonType="Button">
-                                            <HeaderStyle ForeColor="Black" />
-                                            <ItemStyle Width="30px" Font-Size="Small" HorizontalAlign="Left" />
-                                            </asp:ButtonField>
-                                            <asp:BoundField DataField="IdUsuario" HeaderText="ID">
-                                            <HeaderStyle ForeColor="Black" Width="30px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="NombreUsuario" HeaderText="User">
-                                            <HeaderStyle ForeColor="Black" Width="40px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre Completo">
-                                            <HeaderStyle ForeColor="Black" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="NombreCargo" HeaderText="Cargo">
-                                            <HeaderStyle ForeColor="Black" Width="150px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="Activo" HeaderText="Activo">
-                                            <HeaderStyle ForeColor="Black" Width="50px" />
-                                            </asp:BoundField>
-                                            <asp:BoundField DataField="AdministradorSistema" HeaderText="Admin">
-                                            <HeaderStyle ForeColor="Black" Width="50px" />
-                                            </asp:BoundField>
-                                        </Columns>
-                                        <EditRowStyle BackColor="#2461BF" />
-                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" Font-Size="Small" HorizontalAlign="Left" />
-                                        <PagerSettings Mode="NumericFirstLast" />
-                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" Font-Bold="False" Font-Size="Medium" Width="10px" />
-                                        <RowStyle BackColor="#EFF3FB" Font-Size="Small" />
-                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                    </asp:GridView>
+                                    <asp:UpdatePanel ID="UPGrillaUsuariosExcel" runat="server">
+                                        <ContentTemplate>
+                                            <asp:GridView ID="grdExcel" runat="server" AllowSorting="True" AutoGenerateColumns="False" CaptionAlign="Bottom" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None" Height="108px" HorizontalAlign="Center" PageSize="1" Width="242px">
+                                                <AlternatingRowStyle BackColor="White" />
+                                                <Columns>
+                                                    <asp:BoundField AccessibleHeaderText="Nº" DataField="NumRegistro" HeaderText="Nº">
+                                                    <HeaderStyle ForeColor="Black" Width="15px" />
+                                                    </asp:BoundField>
+                                                    <asp:ButtonField ButtonType="Button" HeaderText="Sel" Text="Sel">
+                                                    <HeaderStyle ForeColor="Black" />
+                                                    <ItemStyle Font-Size="Small" HorizontalAlign="Left" Width="30px" />
+                                                    </asp:ButtonField>
+                                                    <asp:BoundField DataField="IdUsuario" HeaderText="ID">
+                                                    <HeaderStyle ForeColor="Black" Width="30px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="NombreUsuario" HeaderText="User">
+                                                    <HeaderStyle ForeColor="Black" Width="40px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre Completo">
+                                                    <HeaderStyle ForeColor="Black" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="NombreCargo" HeaderText="Cargo">
+                                                    <HeaderStyle ForeColor="Black" Width="150px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Activo" HeaderText="Activo">
+                                                    <HeaderStyle ForeColor="Black" Width="50px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="AdministradorSistema" HeaderText="Admin">
+                                                    <HeaderStyle ForeColor="Black" Width="50px" />
+                                                    </asp:BoundField>
+                                                </Columns>
+                                                <EditRowStyle BackColor="#2461BF" />
+                                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" Font-Size="Small" ForeColor="White" HorizontalAlign="Left" />
+                                                <PagerSettings Mode="NumericFirstLast" />
+                                                <PagerStyle BackColor="#2461BF" Font-Bold="False" Font-Size="Medium" ForeColor="White" HorizontalAlign="Center" Width="10px" />
+                                                <RowStyle BackColor="#EFF3FB" Font-Size="Small" />
+                                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            </asp:GridView>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 </div>
                         <br />
                         <br />

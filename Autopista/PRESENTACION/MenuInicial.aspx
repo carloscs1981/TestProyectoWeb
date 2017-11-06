@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
        
-    <html>
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

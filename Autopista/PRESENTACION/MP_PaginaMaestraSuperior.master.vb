@@ -14,7 +14,7 @@ Partial Class PRESENTACION_Master_Page_MasterPageAutopista
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         If (Session("User_NombreUsuario") Is Nothing) Then
-            Response.Redirect("InicioSesion.aspx", False)
+            '    Response.Redirect("~/PRESENTACION/MenuInicial.aspx", False)
         Else
             lblNombreUsuario.Text = ""
             lblNombreUsuario.Text = Session("User_NombreCompleto").ToString & " | " & Session("User_Cargo").ToString

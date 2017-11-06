@@ -444,16 +444,18 @@ Partial Class PRESENTACION_MenuPrincipal
                 Dim DS As DsUsuario
                 Dim Encripador As New clsEncriptador
 
-                DS = AD_Usuario.CargaDatosUsuario(IdUsuario)
-                If (DS.DatosUsuariosCreados.Rows.Count > 0) Then
+            DS = AD_Usuario.CargaDatosUsuario(IdUsuario)
+
+
+            If (DS.DatosUsuariosCreados.Rows.Count > 0) Then
 
 
 
                     For Each Data As DsUsuario.DatosUsuariosCreadosRow In DS.DatosUsuariosCreados
 
-                        txtIdUsuario.Text = Data.IdUsuario
-                        txtUser.Text = Data.NombreUsuario
-                        txtNombreCompleto.Text = Data.NombreCompleto
+                    txtIdUsuario.Text = Data.IdUsuario
+                    txtUser.Text = Data.NombreUsuario
+                    txtNombreCompleto.Text = Data.NombreCompleto
                         txtRut.Text = Data.Rut
                         txtCelular.Text = Data.Celular
                         cboCargos.Text = Data.NombreCargo
@@ -638,4 +640,7 @@ Partial Class PRESENTACION_MenuPrincipal
             CargaUsuarios()
 
         End Sub
-    End Class
+    Protected Sub Timer1_Tick(sender As Object, e As EventArgs) Handles TimerActualizaGrillaUsuarios.Tick
+        CargaUsuarios()
+    End Sub
+End Class

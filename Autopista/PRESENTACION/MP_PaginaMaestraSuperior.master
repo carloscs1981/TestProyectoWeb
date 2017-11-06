@@ -4,11 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  
+
+   <!-- Bootstrap -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
            
+ 
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no">
@@ -86,15 +91,7 @@
 
 
 
- <footer id="colophon" role="contentinfo">
-<div id="site-generator">
-<p style="height: 50px">Copyright 2017 Autopistas de Antofagasta
-<br />
-<span class="auto-style13">Desarrollado por Carlos A. Carrera S. - carloscs1981@yahoo.com</span>
-<br />
-</p>
-			</div>
-</footer>
+
 
 </body>
    

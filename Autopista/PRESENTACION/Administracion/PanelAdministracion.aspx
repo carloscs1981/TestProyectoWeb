@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="one-fifth demo-image"><a title="Mantenedor Areas de la Empresa" href="https://amazingslider.com/examples/jquery-gallery-with-multiple-rows-thumbnail-navigation/">
+        <div class="one-fifth demo-image"><a title="Mantenedor Areas de la Empresa" href="../FormularioTesting.aspx">
             <div class="demo-image-wrapper">
                 <img src="../recursos/Opcion2.jpg" alt="Mantenedor Areas de la Empresa" style="width: 102px; height: 74px" /><div class="demo-image-overlay"></div>
             </div>
